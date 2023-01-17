@@ -1,0 +1,87 @@
+------------------------------  Website Rest API ------------------------------
+-   Website merupakan sekumpulan halaman yang diakses menggunakan browser yang dapat dilihat secara umum oleh banyak pengguna internet. 
+-   Pengembang / pembuat web : web developer
+Back-end
+        Back-end merupakan bagian pada website yang mengatur logika dan mengolah data. Biasanya proses di bagian back-end berada pada sisi server (server-side).
+Front-end
+    Front-end merupakan bagian website yang dilihat oleh pengguna (end user). Bagian ini biasanya meliputi desain tampilan dan interface yang dapat dikontrol oleh pengguna.
+
+Application Programming Interface (API)
+    API digunakan sebagai antarmuka dari sebuah aplikasi agar dapat digunakan oleh aplikasi yang lain. 
+
+REST API. 
+    REST merupakan singkatan dari REpresentational State Transfer yang merupakan standar arsitektur komunikasi berbasis web yang digunakan sebagai jembatan antara back-end dan front-end
+
+REST API menggunakan protocol HTTP (Hypertext Transfer Protocol) 
+
+------------------------------  Stuktur Website Rest API ------------------------------
+Request merupakan permintaan dari bagian front-end.
+-   End-point atau route, merupakan URL yang yang diakses saat melakukan request.https://blockchain.info/tobtc?currency=USD&value=500 
+    URL atau end-point di atas digunakan untuk mengirimkan request yang akan memberikan respons info dari harga bitcoin saat ini berdasarkan 2 parameter yang dikirimkan yaitu parameter currency=USD dan value=500.
+-   Method, merupakan jenis atau tipe dari request. Secara umum yang sering digunakan saat proses request adalah method GET dan POST.
+    Perbedaan dari method GET dan POST adalah
+    -	Data yang dikirimkan dengan method GET terlihat pada url (seperti contoh end-point di atas), sedangkan data yang dikirimkan dengan 
+        method POST tidak terlihat karena diletakkan pada bagian body.
+    -	Ukuran data yang dikirimkan dengan method GET sangat terbatas dibandingkan dengan method POST.
+    -	PUT, mengubah data yang sudah ada
+    -	DELETE, menghapus data yang sudah ada
+-	Headers, merupakan bagian yang berisi informasi saat melakukan request maupun response. Biasanya digunakan untuk keperluan autentikasi 
+    dan penjelasan konten yang ada pada body dari request yang diberikan.
+-   Data (Body), merupakan bagian untuk menyimpan informasi atau data yang dikirimkan pada saat request.
+
+
+Response merupakan data yang dikembalikan setelah melakukan proses request. Terdapat dua komponen pada bagian response yaitu sebagai berikut.
+-   Response Code, merupakan kode angka yang menjelaskan status response yang dikirimkan oleh server. Berikut ini kode beserta dengan 
+    penjelasannya.
+    -	200+ mempunyai arti bahwa request yang dikirimkan berhasil atau sukses
+    -	300+ mempunyai arti bahwa request yang dikirimkan dialihkan ke URL yang lain
+    -	400+ mempunyai arti bahwa terdapat error dari sisi client pada saat mengirimkan request.
+    -	500+ mempunyai arti bahwa terdapat error dari sisi server pada saat request dikirimkan.
+-   Response Data, merupakan data yang dikirimkan oleh server setelah proses request. Data yang dikirimkan dapat berformat JSON atau XML. 
+    Pada modul kali ini, kita akan fokus pada format response berupa JSON.
+
+------------------------------  Node Js ------------------------------
+install node.Js : https://nodejs.org/en/download/
+check version   : node -v
+execution       : node namaFile.js 
+
+------------------------------  Rest API Node Js ------------------------------
+-   Express JS
+    Express JS merupakan framework yang dapat memperingkas dalam pembuatan REST API karena telah menyediakan sistem routing yang berguna untuk pembuatan end-point, middleware, file static, integrasi database, dan masih banyak lagi.
+-   Body-Parser
+    Body-parser merupakan pustaka yang digunakan untuk mengekstrak data yang dikirmkan saat proses request terutama pada bagian body.
+-   CORS
+    CORS (Cross Origin Resource Sharing) merupakan sebuah proteksi terhadap URL atau end-point ketika diakses oleh domain/pihak luar (cross platform).
+
+------------------------------  Create Rest API Node Js ------------------------------
+npm init --yes                                  : inisialisasi node project module
+npm install --save express body-parser cors.    : instal library NPM
+
+------------------------------  Folder ------------------------------
+router : untuk mengatur lalu lintas file berdasarkan request dari pengguna. Routes terletak di dalam folder /routes.
+
+
+------------------------------ Request Method ------------------------------
+-   GET, digunakan untuk proses READ DATA atau mendapatkan data dari database.
+-   POST, digunakan untuk proses CREATE DATA atau menambahkan data baru ke database.
+-   PUT, digunakan untuk proses UPDATE DATA atau mengubah data pada database.
+-   DELETE, digunakan untuk proses DELETE DATA atau menghapus data pada database.
+
+------------------------------ Make CRUD  ------------------------------
+moklet_rest_api : Create database
+npm init -y
+npm i --save express body-parser cors mysql
+
+
+------------------------------ Node JS DATABASE ---------------------------
+File EJS : sebagai rendering template web pada Node.js, dan didalam 	file tersebut terisikan kode-kode HTML (sebuah markup language). 
+
+Endpoints adalah antarmuka (bisa berupa URL, function/method), dan pada REST API,
+dibutuhkan 1 Endpoint. 1 Endpoint bisa berisikan beberapa function/method. 
+
+
+
+
+
+
+

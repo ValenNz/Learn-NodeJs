@@ -1,0 +1,131 @@
+---------------------- Node Js ----------------------
+-   Node.js adalah runtime Javascript yang dibangun di mesin Javascript V8 Chrome untuk memudahkan pembuatan aplikasi jaringan cepat dan skalabel.
+-   Download nodejs = https://nodejs.org/en/
+-   Node js bukanlah bahasa pemrograman, melainkan runtime environment untuk mengeksekusi kode javascript di sisi server (server-side)Sehingga memungkinkan kita untuk mengembangkan aplikasi web menggunakan bahasa pemrograman javascript di sisi server (server-side).Layaknya PHP, Phyton, Ruby dan lainnya. Tidak hanya itu, node.js juga include dengan berbagai modul library javascript yang dapat digunakan secara instan. Seperti http modul, file system, dan lain sebagainya.
+
+---------------------- Kelebihan Node Js ----------------------
+-   Node.js menggunakan model I / O non-blocking yang bersifat event-driven yang membuatnya ringan dan efisien, sempurna untuk aplikasi real-time data-intensif yang berjalan di perangkat terdistribusi.
+
+#1. Asynchronous and Event Driven 
+    Semua pustaka Node.js API adalah asynchronous, artinya, non-blocking. Ini pada dasarnya berarti server berbasis Node.js tidak pernah menunggu API untuk mengembalikan data. Server pindah ke API berikutnya setelah memanggilnya dan mekanisme pemberitahuan event Node.js membantu server untuk mendapatkan respons dari panggilan API sebelumnya.
+#2. Sangat Cepat 
+    Dibangun di Google Chrome V8 JavaScript Engine, pustaka Node.js sangat cepat dalam eksekusi kode.
+#3. Single Threaded tetapi Highly Scalable 
+    Node.js menggunakan model bergulir tunggal dengan perulangan peristiwa. Mekanisme event membantu server untuk merespons dengan cara non-blocking dan menjadikan server sangat skalabel dibandingkan dengan server tradisional yang membuat untaian terbatas untuk menangani permintaan. Node.js menggunakan program bergulir tunggal dan program yang sama dapat memberikan layanan ke jumlah permintaan yang jauh lebih besar daripada server tradisional seperti Apache HTTP Server.
+#4. Tidak Ada Buffer 
+    Aplikasi Node.js tidak pernah menyangga data apa pun. Aplikasi ini hanya menghasilkan data dalam potongan.
+#5. Lisensi 
+    Node.js dirilis di bawah lisensi MIT.
+
+Modules
+-   sekumpulan cide yang dapat digunaakn kembali, dengan antarmuka yang terdefinisi
+
+Node Modules
+-   Fungsionalitas yang dimpel ataupun kompleks yang tersimpan di dalam sebuah diile js, yang dapat kita gunakan kembali pada node js
+-   Setiap modul di dalama node js memiliki konteksnya masing masing, tidak bisa saling tercampur dengan modul lain pada lingkup global.
+-   JIka kita mempunyai 2 file satu.js dan dua.js kita harus melakukan exports pada file satu.js dan melakukan require di file dua.js 
+-   Core Modules, Local Modules, Third Party Modules
+-   require() : mencari modul dengan urutan core modules -> file atau direcktori (./ atau / atau ../) -> folder 'node_moduls'
+
+NPM (Node Package Manager)
+-   NPM adalah salah satu registri software terbesar saat ini yang digunakan oleh para developer untuk saling berbagi kode package JavaScript. Secara default, NPM sudah disertakan dengan node.js.
+-   inisialisasi npm 
+    npm -v (versi)
+    npm init
+
+ExpressJs
+-   Web App Framework yang dibuat di atas NodeJs
+-   Menyediakan antramuka yang minima untuk kakas yang diperlukan dalam membuat sebuah Web
+-   Membantu pengelolaan aliran data dari server ke Web
+-   MERN, MEAN, MEVN stack (MongoDB, ExpressJs, React | Angular | Vue, Node js)
+
+Fitur
+-   Menagani req untuk berbagai http dengan mudah (routes)
+-   MVC (Model-View-Controller)
+-   Terintegrasi dengan "view" rendering engine, untuk mengelola template
+-   middleware
+
+Framework opinionated (aturanya sudah jela / diberi tahu/ ada langkah langkah)
+Framework unopinionated (tidak ada aturanya/ Flexibel/ open source)
+
+View
+-   Mempermudah dalam pembuatan web statis
+-   Mengganti var pada tamplate lalu membentukan dalan HTML
+
+EJS (EMbedde Js Template)
+-   Simple Syntax
+-   Simple Setup
+-   Speedy Execution
+
+Middleware
+-   Sebah software yang menghubungkan software
+logic node -> middleware -> physocal node
+
+Ilustration 
+-   Req -> web -> Res
+
+nodemon app
+
+---------------------- Node Js dan Express Framework ----------------------
+-   Express adalah framework aplikasi web Node.js minimal dan fleksibel yang menyediakan serangkaian fitur canggih untuk aplikasi web dan seluler.
+-   Express memiliki segudang metode utilitas HTTP dan middleware yang Anda inginkan, membuat API yang kuat cepat dan mudah.
+
+Make file 'app.js' : penghubung server
+jalankan           : node app.js
+
+---------------------- Make Node Js dan Express Framework ----------------------
+create 'package.json' : npm init
+Intall Express        : npm install express --save
+
+---------------------- Serving Static File ----------------------
+-   Express menyediakan middleware express.static untuk melayani file statis, seperti gambar, CSS, JavaScript, dan lain-lain.
+-   Anda hanya perlu meneruskan nama direktori tempat Anda menyimpan file statis Anda ke middleware express.static untuk melayani file secara langsung.
+
+
+    Express
+Digunakan untuk API (backend - express - frontend)
+
+npm init -y  : install node
+main         : index.js 
+package.json : kumpulan library yang ada di project kita (dependency project)
+npm run api-service : menjalankan node
+npm i express : instaal express
+npm i nodemon : instaall nodemon (refresh serer otomatis)
+
+req : Mengambil dari luar ke dalam (semua dari postmant)
+ers : Mengambil dari dalam  (semua dari sistem)
+
+npm i body-parse : menangkap body yang dikirim dari frontend
+
+npm i mysql : install database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

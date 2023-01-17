@@ -1,0 +1,13 @@
+<h3>Daftar Pelajar</h3>
+<% if (pelajar.length < 1) { %>
+    <h3 style="color:red">Data pelajar kosong</h3>
+<% } else{ %> 
+    <% pelajar.forEach(pljr => { %>
+        <ul>
+            <li>Nama : <%= pljr.nama  %> </li>
+            <li>Email: <%= pljr.email %> </li>
+        </ul>
+    <% }) %> 
+<% }  %> 
+</body>
+</html>
