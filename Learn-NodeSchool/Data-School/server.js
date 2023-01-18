@@ -57,6 +57,10 @@ app.use("/pelanggaran_siswa",validateToken(), pelanggaran_siswa) // use router w
 const guru = require("./router/guru") // memanggil router guru
 app.use("/guru", validateToken(), guru)
 
+const jurusan = require("./router/jurusan") // memanggil router jurusan
+app.use("/jurusan", validateToken(), jurusan)
+
+
 /* membuat web server dengan port 8000 */
 app.listen(8000, () => {
     console.log("server run on port 8000")
