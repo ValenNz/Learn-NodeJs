@@ -80,6 +80,8 @@ Endpoints adalah antarmuka (bisa berupa URL, function/method), dan pada REST API
 dibutuhkan 1 Endpoint. 1 Endpoint bisa berisikan beberapa function/method. 
 
 
+halo semu
+
 
 
 
