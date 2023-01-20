@@ -1,4 +1,3 @@
-
 const express = require("express")          // Import file express
 const bodyParser = require("body-parser")   // Import bodyPharse (mengambil data dari form)
 const cors = require("cors")                // import file cors
@@ -75,6 +74,7 @@ app.get("/:id", (req, res) => {
 })
 
 // end-point menyimpan data guru
+// end-point menyimpan data guru
 app.post("/", upload.single("foto"), (req,res) => {
 
     // prepare data
@@ -104,6 +104,7 @@ app.post("/", upload.single("foto"), (req,res) => {
         })
     }
 })
+
 
 
 // end-point mengubah data guru
@@ -141,7 +142,7 @@ app.put("/:id", upload.single("foto"), (req,res) => {
             let fileName = result[0].foto
 
             // hapus file yg lama
-            let dir = path.join(__dirname,"image/foto_guru",fileName)
+            let dir = path.join(__dirname,"../image/foto_guru",fileName)
             fs.unlink(dir, (error) => {})
         })
 

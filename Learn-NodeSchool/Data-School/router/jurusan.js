@@ -113,7 +113,7 @@ app.put("/:id", (req,res) => {
 })
 
 /* Router DELETE */
-app.delete("/jurusan/:id", (req,res) => {
+app.delete(":id", (req,res) => {
     /* Menangkap data yang dikirim */
     let data = {
         id_jurusan: req.params.id

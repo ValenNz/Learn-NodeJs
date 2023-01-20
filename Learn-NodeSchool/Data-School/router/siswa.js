@@ -117,28 +117,32 @@ app.put("/:id", (req,res) => {
 })
 
 /* Router DELETE */
-app.delete("/siswa/:id", (req,res) => {
-    /* Menangkap data yang dikirim */
+// end-point menghapus data siswa berdasarkan id_siswa
+app.delete("/:id", (req,res) => {
+    // prepare data
     let data = {
         id_siswa: req.params.id
     }
-    let sql = "delete from siswa where ?" // Menghapus data dari sql
 
-    /* Menjalankan Query */
+    // create query sql delete
+    let sql = "delete from siswa where ?"
+
+    // run query
     db.query(sql, data, (error, result) => {
-        let response = null         // Mengirim response null
-        if (error) {                // jika error tampilkan pesan error
+        let response = null
+        if (error) {
             response = {
                 message: error.message
             }
-        } else {                    // Jika tidak error tampilkan data + "data Deleted"
+        } else {
             response = {
-                message: result.affectedRows + "Data Berhasil Dihapus"
+                message: result.affectedRows + " data deleted"
             }
         }
         res.json(response) // send response
     })
 })
+
 
 
 module.exports = app // Expotr supaya dapat diacc di server.js
