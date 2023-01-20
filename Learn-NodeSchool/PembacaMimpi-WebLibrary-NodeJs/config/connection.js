@@ -5,7 +5,9 @@ const db = createPool({
     host:process.env.DB_HOST.DB_PORT,
     password : process.env.DB_PASS,
     database : process.env.MYSQL_DB,
-    connectionLimit :10
+    connectionLimit :10,
+    socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
+
 });
 
 module.exports = db 
