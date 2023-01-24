@@ -122,7 +122,7 @@ dibutuhkan 1 Endpoint. 1 Endpoint bisa berisikan beberapa function/method.
 8. Hubungkan relation nya 
 	Akan dijalankan dengan perintah : npx sequelize-cli db:migrate
 
-9. Lakukan seeder
+9. Lakukan seeder	
 		Sequelize Seeder :
 	-	Seeder merupakan sebuah proses untuk memberikan sample data pada struktur database yang telah dibuat sebelumnya
 	-	Create seeder	: npx sequelize-cli seed:generate --name sample-nama_table
