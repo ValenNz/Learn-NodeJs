@@ -148,7 +148,8 @@ dibutuhkan 1 Endpoint. 1 Endpoint bisa berisikan beberapa function/method.
 			berupa object yang berisi dua key yaitu key “count” bernilai jumlah data yang didapatkan dan key “rows” berisi array object data yang didapatkan.
 	f. Filtering Data
 		•	Inisialisasi const op = require('sequelize').Op
-				
+12. Buatlah router untuk menjalankan function CRUD
+13. Buatlah server untuk menjalankan 
 
 
 
